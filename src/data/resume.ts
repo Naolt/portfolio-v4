@@ -70,13 +70,14 @@ export const experiences: Experience[] = [
     period: "Feb 2025 – Aug 2025",
     location: "Dubai (Remote)",
     bullets: [
-      "Cut LLM API costs by 67% and response time from ~9s to ~3s by redesigning agent execution flow with LangChain's function calling and LangGraph's memory/state handling.",
-      "Refactored monolithic agents into modular architecture by offloading tools to reusable MCP-based microservices and automating state management with LangGraph.",
-      "Implemented RAG pipelines with Pinecone vector DB for semantic search across images, documents, and attachments, replacing keyword-based retrieval.",
+      "Cut LLM API costs by 67% and response time from ~9s to ~3s by building a response interception system that bypasses LLM calls for known structured outputs from tools like Maps, Calendar, and Hotels.",
+      "Refactored monolithic agents into modular architecture by offloading tools to 7+ reusable MCP-based microservices and automating state management with LangGraph.",
+      "Integrated RAG pipelines with vector search for semantic queries across events and todos, replacing keyword-based retrieval in agent workflows.",
       "Replaced top-down agent hierarchy with swarm architecture, enabling dynamic task handoff and direct inter-agent communication across all workflows.",
+      "Built browser automation service with FastAPI and browser-use for multi-platform restaurant reservations across Google Maps, OpenTable, and SevenRooms, with parallel browser instances and Chrome profile management.",
     ],
     techStack:
-      "LangGraph, LangChain, MCP, Pinecone, RAG, Express.js, TypeScript, Cosmos DB, Azure, Firebase, Playwright",
+      "LangGraph, LangChain, MCP, RAG, Express.js, FastAPI, Laravel, Python, TypeScript, JavaScript, Cosmos DB, Azure, Firebase, Playwright, browser-use",
   },
   {
     company: "Eskalate",
@@ -156,17 +157,6 @@ export const projects: Project[] = [
     liveUrl: "https://ims-sand-two.vercel.app",
     githubUrl: "https://github.com/Naolt/IMS",
     featured: true,
-  },
-  {
-    title: "Restaurant Reservation Automation",
-    description:
-      "Multi-platform automation system that discovers and books restaurant reservations across Google Maps, OpenTable, and SevenRooms.",
-    bullets: [
-      "Intelligent browser-use fallback for unsupported platforms.",
-      "99%+ success rate through parallel processing and robust error recovery.",
-    ],
-    techStack: ["Python", "Playwright", "Browser-Use"],
-    githubUrl: "https://github.com/Naolt/Browser-Automation-Service",
   },
   {
     title: "Eskalate.io",
