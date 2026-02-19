@@ -81,16 +81,29 @@ export const experiences: Experience[] = [
   {
     company: "Eskalate",
     role: "Project Lead & Frontend Developer",
-    period: "Jul 2023 – Jan 2025",
+    period: "Aug 2024 – Jan 2025",
     location: "Addis Ababa, Ethiopia",
     bullets: [
-      "Shipped and launched eskalate.io, a platform connecting 800+ African tech talents with global job opportunities.",
-      "Planned roadmaps and executed Agile sprints based on 90+ developer interviews, translating insights into actionable features.",
-      "Boosted profile completion from 13% to 90%+ after one product iteration by introducing AI-powered rewriting, tooltips, and resume parsing.",
-      "Architected the entire frontend structure in Next.js, implementing coding guidelines, linters, pre-commit hooks, CI/CD, and GitHub configurations.",
+      "Led product direction for eskalate.io, planning roadmaps and executing Agile sprints based on 90+ developer interviews.",
+      "Boosted profile completion from 13% to 90%+ by adding contextual tooltips, simplifying editors for consistent formatting, and conducting targeted outreach.",
+      "Rebuilt the marketing landing page with service sections, navbar dropdowns, and responsive service pages.",
+      "Dockerized the application with multi-stage builds for GCP deployment.",
     ],
     techStack:
-      "Next.js, TypeScript, Tailwind CSS, Shadcn UI, Jira, Figma, GitHub, GCP",
+      "Next.js, TypeScript, Tailwind CSS, Shadcn UI, Docker, Jira, Figma, GitHub, GCP",
+  },
+  {
+    company: "Eskalate",
+    role: "Frontend Developer",
+    period: "Oct 2023 – Jul 2024",
+    location: "Addis Ababa, Ethiopia",
+    bullets: [
+      "Architected the frontend from scratch — folder structure, Redux/RTK Query state layer, refresh token system, coding guidelines, linters, CI/CD, and GitHub configurations.",
+      "Built the complete profile system (20+ components): multi-step forms with validation, drag-and-drop resume upload, image cropping, and progress tracking for 800+ users.",
+      "Led frontend contributions across a 5-developer frontend team within a 9-developer cross-functional team.",
+    ],
+    techStack:
+      "Next.js, TypeScript, Redux Toolkit, RTK Query, Tailwind CSS, GCP",
   },
   {
     company: "Freelance",
