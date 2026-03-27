@@ -132,6 +132,29 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Roommate Expenses",
+    description:
+      "Splitwise-style expense sharing app used by real users to track group spending, balances, and settlements.",
+    bullets: [
+      "Built end-to-end expense workflows for groups and 1:1 tracking with equal, exact, and percentage split options.",
+      "Implemented debt simplification and settlement flows to reduce the number of transactions required to settle balances.",
+      "Shipped production features including CSV export, spending analytics, notifications, and installable PWA support.",
+    ],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "MongoDB",
+      "Mongoose",
+      "NextAuth.js",
+      "Tailwind CSS",
+      "Shadcn UI",
+      "Vercel",
+    ],
+    liveUrl: "https://roommate-expenses.vercel.app/",
+    githubUrl: "https://github.com/Naolt/roommate-expenses",
+    featured: true,
+  },
+  {
     title: "PharmaHub",
     description:
       "Award-winning e-commerce pharmacy platform addressing medicine accessibility in Ethiopia. 1st place at Ethio-Health Hackathon.",
