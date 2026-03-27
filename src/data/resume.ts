@@ -151,7 +151,6 @@ export const projects: Project[] = [
       "Vercel",
     ],
     liveUrl: "https://roommate-expenses.vercel.app/",
-    githubUrl: "https://github.com/Naolt/roommate-expenses",
     featured: true,
   },
   {
