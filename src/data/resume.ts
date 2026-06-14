@@ -50,19 +50,19 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    company: "Hydrus.ai",
-    role: "Back End Developer & AI Engineer",
+    company: "Hydrus.ai (via SDL Engineering client engagements)",
+    role: "Full-Stack & AI Engineer",
     period: "Oct 2025 – Present",
     location: "Remote",
     isCurrent: true,
     bullets: [
-      "Built medical document processing API using Django Ninja with async upload endpoints, job tracking, and Celery/Redis for concurrent document processing.",
-      "Implemented OCR pipeline with Google Document AI batch processing for multi-page documents (15+ pages) with per-page confidence scoring and distributed result aggregation.",
-      "Developed AI-powered medical entity extraction using Google Gemini 2.5 Flash with Pydantic schemas to extract medications, conditions, lab results and map clinical text to ICD-10-CM codes with span annotations.",
-      "Deployed cloud-native infrastructure on GCP Cloud Run with Cloud Storage integration, Docker containerization, Cloud Build CI/CD, and PostgreSQL database.",
+      "Attian: Executed a pixel-perfect Framer-to-Next.js migration, replicated design motion, and architected a 5-schema Sanity CMS with automated lead capture and ISR publishing workflows.",
+      "AOSN: Managed Render infrastructure and Sentry diagnostics, re-engineered Stytch MFA/auth flows, and resolved backend session-validation issues to eliminate recurring 401 regressions.",
+      "PrivyAI: Optimized AI agent provisioning and RunPod/Docker runtimes, and integrated Web Speech input plus privacy-safe observability for real-time agent interactions.",
+      "JanaIntake: Built medical document pipelines with Django Ninja and Celery, and used Gemini + Pydantic to automate clinical entity extraction and ICD-10 mapping.",
     ],
     techStack:
-      "Python, Django Ninja, Celery, Redis, PostgreSQL, GCP, Google Gemini AI, Docker, Pydantic",
+      "TypeScript, JavaScript, Python, Next.js, React, FastAPI, Sanity CMS, PostgreSQL, Docker, RunPod, Stytch, Sentry, Plausible, PostHog",
   },
   {
     company: "Fluid AI",
@@ -132,25 +132,82 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Roommate Expenses",
+    title: "Arena",
     description:
-      "Splitwise-style expense sharing app used by real users to track group spending, balances, and settlements.",
+      "AI campaign intelligence platform that unifies Google, Meta, and Bing ad data into ML-powered planning, simulation, and creative tools for PPC account teams.",
     bullets: [
-      "Built end-to-end expense workflows for groups and 1:1 tracking with equal, exact, and percentage split options.",
-      "Implemented debt simplification and settlement flows to reduce the number of transactions required to settle balances.",
-      "Shipped production features including CSV export, spending analytics, notifications, and installable PWA support.",
+      "Built a data pipeline ingesting and unifying 58,000+ rows of ad performance data across Google, Meta, and Bing into BigQuery for cross-platform analytics.",
+      "Trained and deployed three platform-specific ML regression models on 36,500 rows to power a budget simulator and allocator for predicted spend efficiency.",
+      "Built a RAG campaign creator with Qwen3-VL-8B embeddings, BigQuery vector search over 688 historical ads, and a context-aware GPT assistant for anomaly analysis and creative generation.",
     ],
     techStack: [
       "Next.js",
+      "React",
+      "FastAPI",
+      "Python",
+      "BigQuery",
+      "scikit-learn",
+      "PyTorch",
+      "Azure OpenAI",
+      "Qwen3-VL-8B",
+      "Cloudflare Workers",
+      "Kubernetes",
+      "Helm",
+    ],
+    liveUrl: "https://arena-frontend.vella-ai-account.workers.dev",
+    featured: true,
+  },
+  {
+    title: "Divvy",
+    description:
+      "Full-stack expense sharing and personal finance platform with secure read-only financial data access for AI assistants.",
+    bullets: [
+      "Built authenticated workflows for groups, personal spending, settlements, custom categories, budgets, notifications, and profile settings.",
+      "Developed analytics views with scoped filters, trend charts, category/group/payer breakdowns, biggest-expense drilldowns, and a searchable expense ledger.",
+      "Implemented a read-only MCP integration with API-key authentication and Claude-compatible tooling for safe AI analysis of expenses, balances, and budgets.",
+    ],
+    techStack: [
       "TypeScript",
+      "Next.js",
+      "React",
       "MongoDB",
       "Mongoose",
-      "NextAuth.js",
+      "NextAuth",
       "Tailwind CSS",
-      "Shadcn UI",
+      "Recharts",
+      "Vitest",
+      "Zod",
+      "MCP",
       "Vercel",
     ],
-    liveUrl: "https://roommate-expenses.vercel.app/",
+    liveUrl: "https://expenses.aurorasolve.com/",
+    githubUrl: "https://github.com/Naolt/roommate-expenses",
+    featured: true,
+  },
+  {
+    title: "Origin V2",
+    description:
+      "Full-stack career operating system for reusable profile content, tailored resume variants, and print-ready application documents.",
+    bullets: [
+      "Built authenticated profile and resume-variant workflows with API-first editing endpoints.",
+      "Designed a reusable content model for canonical profile data, variant overrides, visibility rules, and template styling.",
+      "Implemented live template-backed resume previews with persisted style controls, print-ready rendering, and a foundation for PDF export and AI resume review.",
+    ],
+    techStack: [
+      "TypeScript",
+      "Next.js",
+      "React",
+      "PostgreSQL",
+      "Prisma",
+      "NextAuth",
+      "Zod",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Supabase",
+      "Vercel",
+      "Linear MCP",
+    ],
+    liveUrl: "https://origin-v2.vercel.app",
     featured: true,
   },
   {

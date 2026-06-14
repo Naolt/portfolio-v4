@@ -18,9 +18,8 @@ export default function CustomCursor() {
     // Hide on touch devices
     if (window.matchMedia("(pointer: coarse)").matches) return;
 
-    setIsVisible(true);
-
     const handleMouseMove = (e: MouseEvent) => {
+      setIsVisible(true);
       cursorX.set(e.clientX);
       cursorY.set(e.clientY);
     };
