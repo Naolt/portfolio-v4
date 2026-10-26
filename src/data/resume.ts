@@ -1,11 +1,11 @@
 export const personalInfo = {
   name: "Naol Tamrat",
-  title: "Full-Stack Developer & AI Engineer",
+  title: "Full-Stack AI Engineer",
   tagline:
-    "Building production systems from Next.js frontends to LLM-powered pipelines",
+    "Building AI agents and production web apps, from LangGraph pipelines to the Next.js products people use every day",
   email: "naol.delesa.official@gmail.com",
   phone: "+251910168641",
-  location: "Addis Ababa, Ethiopia",
+  location: "Addis Ababa, Ethiopia (UTC+3)",
   linkedin: "https://www.linkedin.com/in/naolt16",
   github: "https://github.com/Naolt",
   leetcode: "https://leetcode.com/u/Naolt/",
@@ -14,27 +14,45 @@ export const personalInfo = {
 };
 
 export const skills = {
-  languages: ["JavaScript", "TypeScript", "Python", "SQL"],
-  frontend: ["Next.js", "React", "React Native", "Tailwind CSS", "Shadcn UI"],
-  backend: [
-    "Node.js",
-    "Express.js",
-    "FastAPI",
-    "Django Ninja",
-    "Celery",
-    "Pydantic",
+  languages: ["TypeScript", "JavaScript", "Python", "SQL"],
+  frontend: [
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Shadcn UI",
+    "Redux Toolkit",
+    "TanStack Query",
+    "Recharts",
   ],
-  ai: ["LangChain", "LangGraph", "MCP", "RAG", "Pinecone", "Google Gemini"],
+  backend: ["Node.js", "Express.js", "FastAPI", "Celery", "Pydantic", "Zod"],
+  ai: [
+    "LangGraph",
+    "LangChain",
+    "MCP",
+    "RAG",
+    "AI agents",
+    "Azure OpenAI",
+    "Google Gemini",
+    "Pinecone",
+    "Vector search",
+  ],
   tools: [
-    "Docker",
-    "Git",
     "PostgreSQL",
+    "BigQuery",
+    "MongoDB",
     "Redis",
-    "GCP",
+    "Docker",
+    "Kubernetes",
+    "Helm",
     "Azure",
-    "Firebase",
+    "GCP",
     "Vercel",
+    "Cloudflare Workers",
+    "GitHub Actions",
     "Playwright",
+    "Vitest",
+    "Sentry",
+    "Sanity CMS",
   ],
 };
 
@@ -50,19 +68,32 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    company: "Hydrus.ai (via SDL Engineering client engagements)",
-    role: "Full-Stack & AI Engineer",
-    period: "Oct 2025 – Present",
+    company: "Vella AI",
+    role: "Contract Full-Stack AI Engineer",
+    period: "May 2026 – Jun 2026",
     location: "Remote",
-    isCurrent: true,
     bullets: [
-      "Attian: Executed a pixel-perfect Framer-to-Next.js migration, replicated design motion, and architected a 5-schema Sanity CMS with automated lead capture and ISR publishing workflows.",
-      "AOSN: Managed Render infrastructure and Sentry diagnostics, re-engineered Stytch MFA/auth flows, and resolved backend session-validation issues to eliminate recurring 401 regressions.",
-      "PrivyAI: Optimized AI agent provisioning and RunPod/Docker runtimes, and integrated Web Speech input plus privacy-safe observability for real-time agent interactions.",
-      "JanaIntake: Built medical document pipelines with Django Ninja and Celery, and used Gemini + Pydantic to automate clinical entity extraction and ICD-10 mapping.",
+      "Built most of Arena, an AI campaign intelligence platform for PPC teams, end to end: Campaign Coach, Budget Simulator, Seasonality Planner, an ML budget allocator, and analytics and benchmark dashboards.",
+      "Built the FastAPI backend and a multi-client BigQuery pipeline unifying 58,000+ rows of Google, Meta, and Bing ad data, with benchmark-based performance scoring.",
+      "Trained three platform-specific regression models to power the budget simulator and allocator; added semantic ad search with a self-hosted Qwen3-VL embedding service and BigQuery VECTOR_SEARCH.",
+      "Built a streaming Azure OpenAI assistant with tool calling and AI image generation for ad creatives.",
+      "Deployed the API and embedder on Azure Kubernetes (AKS) with Helm, and the frontend on Cloudflare Workers via Cloudflare Tunnel.",
     ],
     techStack:
-      "TypeScript, JavaScript, Python, Next.js, React, FastAPI, Sanity CMS, PostgreSQL, Docker, RunPod, Stytch, Sentry, Plausible, PostHog",
+      "Next.js, React, TypeScript, FastAPI, Python, BigQuery, scikit-learn, Azure OpenAI, Qwen3-VL, Kubernetes (AKS), Helm, Cloudflare Workers",
+  },
+  {
+    company: "Hydrus.ai",
+    role: "Full-Stack & AI Engineer",
+    period: "Oct 2025 – May 2026",
+    location: "Remote",
+    bullets: [
+      "Attian: Migrated a Framer marketing site to Next.js with pixel-perfect design and motion across 8+ page templates; built a 5-schema Sanity CMS that lets the team publish articles, case studies, and reports with embedded charts and graphs, plus automated lead capture and ISR.",
+      "AOSN: Rebuilt the Stytch B2B login and MFA flow (headless discovery, SMS and TOTP enrollment) for an AI email-triage tool used by pharmacy staff; traced false 401s to a mismatched Stytch session response field and fixed them; integrated Sentry across React and FastAPI with PII scrubbing; enforced per-user identity from authenticated sessions, covered by isolation tests.",
+      "PrivyAI: Turned the open-source OpenClaw agent framework into Privy-Agent, a privacy-first AI assistant: built Dockerized per-user agent provisioning on RunPod, a web search tool (Parallel Search API), and real-time voice input via the Web Speech API, with privacy-safe observability, API rate limiting, and multi-tenant agent isolation.",
+    ],
+    techStack:
+      "TypeScript, Python, Next.js, React, FastAPI, Sanity CMS, PostgreSQL, Docker, RunPod, Stytch, Sentry",
   },
   {
     company: "Fluid AI",
@@ -71,22 +102,22 @@ export const experiences: Experience[] = [
     location: "Dubai (Remote)",
     bullets: [
       "Cut LLM API costs by 67% and response time from ~9s to ~3s by building a response interception system that bypasses LLM calls for known structured outputs from tools like Maps, Calendar, and Hotels.",
-      "Refactored monolithic agents into modular architecture by offloading tools to 7+ reusable MCP-based microservices and automating state management with LangGraph.",
-      "Integrated RAG pipelines with vector search for semantic queries across events and todos, replacing keyword-based retrieval in agent workflows.",
-      "Replaced top-down agent hierarchy with swarm architecture, enabling dynamic task handoff and direct inter-agent communication across all workflows.",
-      "Built browser automation service with FastAPI and browser-use for multi-platform restaurant reservations across Google Maps, OpenTable, and SevenRooms, with parallel browser instances and Chrome profile management.",
+      "Refactored monolithic agents into a modular architecture by moving tools into reusable MCP-based microservices integrating 10+ third-party APIs, with LangGraph handling state.",
+      "Integrated RAG pipelines with vector search for semantic queries across events, todos, images, documents, and attachments, replacing keyword-based retrieval.",
+      "Replaced a top-down agent hierarchy with a swarm architecture, enabling dynamic task handoff and direct inter-agent communication.",
+      "Built a browser automation service with FastAPI and browser-use for restaurant reservations across Google Maps, OpenTable, and SevenRooms, with parallel browser instances and Chrome profile management.",
     ],
     techStack:
-      "LangGraph, LangChain, MCP, RAG, Express.js, FastAPI, Laravel, Python, TypeScript, JavaScript, Cosmos DB, Azure, Firebase, Playwright, browser-use",
+      "LangGraph, LangChain, MCP, RAG, Express.js, FastAPI, Python, TypeScript, Cosmos DB, Azure, Firebase, Pinecone, Playwright, browser-use",
   },
   {
     company: "Eskalate",
     role: "Project Lead & Frontend Developer",
     period: "Aug 2024 – Jan 2025",
-    location: "Addis Ababa, Ethiopia",
+    location: "Remote",
     bullets: [
-      "Led product direction for eskalate.io, planning roadmaps and executing Agile sprints based on 90+ developer interviews.",
-      "Boosted profile completion from 13% to 90%+ by adding contextual tooltips, simplifying editors for consistent formatting, and conducting targeted outreach.",
+      "Led product direction for eskalate.io, planning roadmaps and running Agile sprints based on 90+ developer interviews.",
+      "Boosted profile completion from 13% to 90%+ by adding contextual tooltips, simplifying editors for consistent formatting, and running targeted outreach.",
       "Rebuilt the marketing landing page with service sections, navbar dropdowns, and responsive service pages.",
       "Dockerized the application with multi-stage builds for GCP deployment.",
     ],
@@ -97,14 +128,13 @@ export const experiences: Experience[] = [
     company: "Eskalate",
     role: "Frontend Developer",
     period: "Oct 2023 – Jul 2024",
-    location: "Addis Ababa, Ethiopia",
+    location: "Remote",
     bullets: [
-      "Architected the frontend from scratch — folder structure, Redux/RTK Query state layer, refresh token system, coding guidelines, linters, CI/CD, and GitHub configurations.",
+      "Architected the frontend from scratch: folder structure, Redux/RTK Query state layer, refresh-token system, coding guidelines, linters, CI/CD, and GitHub configuration.",
       "Built the complete profile system (20+ components): multi-step forms with validation, drag-and-drop resume upload, image cropping, and progress tracking for 800+ users.",
       "Led frontend contributions across a 5-developer frontend team within a 9-developer cross-functional team.",
     ],
-    techStack:
-      "Next.js, TypeScript, Redux Toolkit, RTK Query, Tailwind CSS, GCP",
+    techStack: "Next.js, TypeScript, Redux Toolkit, RTK Query, Tailwind CSS, GCP",
   },
   {
     company: "Freelance",
@@ -112,9 +142,9 @@ export const experiences: Experience[] = [
     period: "Jan 2024 – Apr 2024",
     location: "Addis Ababa, Ethiopia",
     bullets: [
-      "Designed and developed three responsive websites — two ministry sites and a coffee export company site — each tailored to distinct audiences and business needs.",
-      "Led the custom UI design process to ensure clear, accessible layouts for non-technical audiences.",
-      "Integrated content management and dynamic features using Sanity CMS and MongoDB, enabling easy client updates without code.",
+      "Designed and built three responsive websites, two for ministry organizations and one for a coffee export company, each tailored to its audience.",
+      "Led the custom UI design process to keep layouts clear and accessible for non-technical audiences.",
+      "Integrated Sanity CMS and MongoDB so clients can update content without code.",
     ],
     techStack: "Next.js, TypeScript, Tailwind CSS, Sanity, MongoDB",
   },
@@ -132,56 +162,90 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Arena",
+    title: "IMS",
     description:
-      "AI campaign intelligence platform that unifies Google, Meta, and Bing ad data into ML-powered planning, simulation, and creative tools for PPC account teams.",
+      "Multi-tenant inventory and sales SaaS for small retail shops in Ethiopia, live and used by 3 shops since July 2026, with a trilingual AI assistant.",
     bullets: [
-      "Built a data pipeline ingesting and unifying 58,000+ rows of ad performance data across Google, Meta, and Bing into BigQuery for cross-platform analytics.",
-      "Trained and deployed three platform-specific ML regression models on 36,500 rows to power a budget simulator and allocator for predicted spend efficiency.",
-      "Built a RAG campaign creator with Qwen3-VL-8B embeddings, BigQuery vector search over 688 historical ads, and a context-aware GPT assistant for anomaly analysis and creative generation.",
+      "Products with variants, sales and returns, stock receiving and corrections, reports, staff accounts, public product catalogs, and paid Basic/Pro plans.",
+      "\"Ask IMS\": a LangGraph + Gemini assistant that answers shop owners' questions in English, Amharic, or Afaan Oromo using 8 read-only data tools, with every number traced to a tool result and an evaluation suite to check accuracy.",
+      "Server-side tenant isolation and role-based access (owner/staff/admin); transactional stock changes with row locking to prevent overselling, plus a full audit log.",
+      "258 integration tests and 79 Playwright end-to-end tests in CI, with automated migrations, 6-hourly backups, and Sentry monitoring.",
     ],
     techStack: [
       "Next.js",
-      "React",
-      "FastAPI",
-      "Python",
-      "BigQuery",
-      "scikit-learn",
-      "PyTorch",
-      "Azure OpenAI",
-      "Qwen3-VL-8B",
-      "Cloudflare Workers",
-      "Kubernetes",
-      "Helm",
+      "TypeScript",
+      "PostgreSQL",
+      "Neon",
+      "TypeORM",
+      "LangGraph",
+      "Gemini",
+      "Playwright",
+      "Vercel",
     ],
-    liveUrl: "https://arena-frontend.vella-ai-account.workers.dev",
+    liveUrl: "https://ims.aurorasolve.com",
     featured: true,
   },
   {
     title: "Divvy",
     description:
-      "Full-stack expense sharing and personal finance platform with secure read-only financial data access for AI assistants.",
+      "Expense-sharing and personal finance app used by 10 people to log 680+ expenses since April 2026, recently rebuilt as a mobile-first PWA.",
     bullets: [
-      "Built authenticated workflows for groups, personal spending, settlements, custom categories, budgets, notifications, and profile settings.",
-      "Developed analytics views with scoped filters, trend charts, category/group/payer breakdowns, biggest-expense drilldowns, and a searchable expense ledger.",
-      "Implemented a read-only MCP integration with API-key authentication and Claude-compatible tooling for safe AI analysis of expenses, balances, and budgets.",
+      "Group and person-to-person expenses, loans, balances and settle-up, recurring bills, and monthly spending summaries.",
+      "TypeScript monorepo (Turborepo) with a tested money domain using integer minor units, a validated REST API, PostgreSQL with Drizzle and transactional writes, and Better Auth with email verification and rate limiting.",
+      "Covered by 399 automated tests plus Playwright end-to-end checks on phone viewports in CI.",
     ],
     techStack: [
       "TypeScript",
       "Next.js",
       "React",
-      "MongoDB",
-      "Mongoose",
-      "NextAuth",
-      "Tailwind CSS",
-      "Recharts",
-      "Vitest",
+      "Turborepo",
+      "PostgreSQL",
+      "Neon",
+      "Drizzle",
+      "Better Auth",
       "Zod",
-      "MCP",
+      "Vitest",
+      "Playwright",
       "Vercel",
     ],
-    liveUrl: "https://expenses.aurorasolve.com/",
-    githubUrl: "https://github.com/Naolt/roommate-expenses",
+    liveUrl: "https://divvy.aurorasolve.com",
+    featured: true,
+  },
+  {
+    title: "Intelligent Agents",
+    description:
+      "LangGraph agent system with MCP tool integrations, built at Fluid AI and open-sourced with permission.",
+    bullets: [
+      "Modular agents with tools served as MCP-based microservices and LangGraph-managed state.",
+      "Swarm-style architecture with dynamic task handoff between agents.",
+    ],
+    techStack: ["Python", "TypeScript", "LangGraph", "LangChain", "MCP", "RAG"],
+    githubUrl: "https://github.com/Naolt/intelligent-agents",
+    featured: true,
+  },
+  {
+    title: "Browser Automation Service",
+    description:
+      "FastAPI service running parallel browser agents for real-world restaurant reservations, built at Fluid AI and open-sourced with permission.",
+    bullets: [
+      "Automated reservations across Google Maps, OpenTable, and SevenRooms with browser-use.",
+      "Parallel Chrome instances with persistent profile management.",
+    ],
+    techStack: ["Python", "FastAPI", "browser-use", "Playwright"],
+    githubUrl: "https://github.com/Naolt/Browser-Automation-Service",
+    featured: true,
+  },
+  {
+    title: "Unsubscribe Agent",
+    description:
+      "AI-powered automation platform that processes forwarded emails, extracts unsubscribe links, and uses an LLM-controlled browser agent to unsubscribe automatically.",
+    bullets: [
+      "Dual extraction strategy: HTML parsing first, LLM fallback for complex emails, reducing API calls by 90%.",
+      "Domain learning system that caches successful unsubscribe URLs for instant future processing.",
+      "Celery + Redis task queue with a FastAPI webhook for async email processing.",
+    ],
+    techStack: ["Python", "FastAPI", "LangChain", "Celery", "Redis", "Playwright", "Docker"],
+    githubUrl: "https://github.com/Naolt/Unsubscribe-Agent",
     featured: true,
   },
   {
@@ -189,9 +253,9 @@ export const projects: Project[] = [
     description:
       "Full-stack career operating system for reusable profile content, tailored resume variants, and print-ready application documents.",
     bullets: [
-      "Built authenticated profile and resume-variant workflows with API-first editing endpoints.",
-      "Designed a reusable content model for canonical profile data, variant overrides, visibility rules, and template styling.",
-      "Implemented live template-backed resume previews with persisted style controls, print-ready rendering, and a foundation for PDF export and AI resume review.",
+      "Authenticated profile and resume-variant workflows with API-first editing endpoints.",
+      "Reusable content model for canonical profile data, variant overrides, visibility rules, and template styling.",
+      "Live template-backed resume previews with persisted style controls and print-ready rendering.",
     ],
     techStack: [
       "TypeScript",
@@ -205,37 +269,8 @@ export const projects: Project[] = [
       "shadcn/ui",
       "Supabase",
       "Vercel",
-      "Linear MCP",
     ],
     liveUrl: "https://origin-v2.vercel.app",
-    featured: true,
-  },
-  {
-    title: "PharmaHub",
-    description:
-      "Award-winning e-commerce pharmacy platform addressing medicine accessibility in Ethiopia. 1st place at Ethio-Health Hackathon.",
-    bullets: [
-      "E-commerce platform with integrated inventory and delivery system.",
-      "Two React Native mobile apps (customer and delivery) with OpenStreetMap.",
-      "Next.js role-based web dashboard for multi-pharmacy management.",
-    ],
-    techStack: ["Next.js", "React Native", "Tailwind CSS", "Figma"],
-    githubUrl: "https://github.com/Naolt/pharmaHub",
-    featured: true,
-  },
-  {
-    title: "Boutique IMS",
-    description:
-      "Full-stack Inventory Management System for a fashion boutique with AI-powered assistant, sales analytics, and role-based access control.",
-    bullets: [
-      "Product catalog with variant management (sizes, colors), real-time stock tracking, and low-stock alerts.",
-      "AI assistant powered by LangChain/LangGraph + Google Gemini for natural language inventory and sales queries.",
-      "Sales analytics dashboard with revenue trends, top-selling products, and inventory distribution charts.",
-    ],
-    techStack: ["Next.js", "Express.js", "PostgreSQL", "LangGraph", "TypeORM"],
-    liveUrl: "https://ims-sand-two.vercel.app",
-    githubUrl: "https://github.com/Naolt/IMS",
-    featured: true,
   },
   {
     title: "Eskalate.io",
@@ -254,7 +289,7 @@ export const projects: Project[] = [
       "Responsive website for an Ethiopian specialty coffee exporter with CMS integration for easy client updates.",
     bullets: [
       "Dynamic content management through Sanity CMS.",
-      "SEO-optimized with accessible design for non-technical audiences.",
+      "SEO-optimized, accessible design for non-technical audiences.",
     ],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Sanity"],
     liveUrl: "https://www.awcoffeeexport.com",
@@ -266,7 +301,7 @@ export const projects: Project[] = [
       "Interactive website showcasing a ministry organization's impact across 12+ Ethiopian cities.",
     bullets: [
       "Sanity CMS for staff-managed content updates.",
-      "Custom UI design with Figma for non-technical audiences.",
+      "Custom UI designed in Figma for non-technical audiences.",
     ],
     techStack: ["Next.js", "TypeScript", "Sanity", "Figma"],
     liveUrl: "https://isa60minethio.com",
@@ -275,35 +310,18 @@ export const projects: Project[] = [
   {
     title: "Kebron Church",
     description:
-      "Ministry website to showcase sermons, events, and outreach initiatives with content management.",
+      "Ministry website showcasing sermons, events, and outreach initiatives with content management.",
     bullets: [
-      "Dynamic content features with MongoDB backend.",
+      "Dynamic content features with a MongoDB backend.",
       "Responsive design tailored for community engagement.",
     ],
     techStack: ["Next.js", "TypeScript", "Tailwind CSS", "MongoDB"],
     liveUrl: "https://kebronchurch.org",
     githubUrl: "https://github.com/Naolt/kebron",
   },
-  {
-    title: "Unsubscribe Agent",
-    description:
-      "AI-powered automation platform that processes forwarded emails, extracts unsubscribe links, and uses an LLM-controlled browser agent to unsubscribe automatically.",
-    bullets: [
-      "Dual extraction strategy: HTML parsing first, LLM fallback for complex emails — reduces API calls by 90%.",
-      "Domain learning system that caches successful unsubscribe URLs for instant future processing.",
-      "Celery + Redis task queue with FastAPI webhook for async email processing at scale.",
-    ],
-    techStack: ["Python", "FastAPI", "LangChain", "Celery", "Playwright", "Docker"],
-    githubUrl: "https://github.com/Naolt/Unsubscribe-Agent",
-  },
 ];
 
 export const education = [
-  {
-    institution: "Ready Tensor",
-    degree: "Agentic AI Development",
-    period: "Aug 2025 – Oct 2025",
-  },
   {
     institution: "Addis Ababa Science And Technology University",
     degree: "BSc in Software Engineering",
@@ -319,7 +337,7 @@ export const education = [
     institution: "A2SV (Africa To Silicon Valley)",
     degree: "Software Engineering Fellowship",
     period: "Oct 2022 – Oct 2023",
-    note: "Top 1% of applicants, Google-backed — 600+ LeetCode problems solved",
+    note: "Top 1% of applicants, Google-backed — 600+ LeetCode and Codeforces problems solved",
   },
 ];
 
@@ -327,7 +345,7 @@ export const achievements = [
   {
     title: "1st Place at Ethio-Health Hackathon",
     description:
-      "Won 1st place and 50,000 ETB at the Ethio-Health Hackathon. Recognized for PharmaHub, an innovative pharmaceutical sales and delivery platform.",
+      "Won 1st place and 50,000 ETB at the Ethio-Health Hackathon for PharmaHub, a pharmaceutical sales and delivery platform.",
     date: "Mar 2024",
   },
   {
