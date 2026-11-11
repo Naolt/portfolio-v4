@@ -164,7 +164,7 @@ export const projects: Project[] = [
   {
     title: "IMS",
     description:
-      "Multi-tenant inventory and sales SaaS for small retail shops in Ethiopia, live and used by 3 shops since July 2026, with a trilingual AI assistant.",
+      "Multi-tenant inventory and sales SaaS for small retail shops in Ethiopia, live in production since July 2026, with a trilingual AI assistant.",
     bullets: [
       "Products with variants, sales and returns, stock receiving and corrections, reports, staff accounts, public product catalogs, and paid Basic/Pro plans.",
       "\"Ask IMS\": a LangGraph + Gemini assistant that answers shop owners' questions in English, Amharic, or Afaan Oromo using 8 read-only data tools, with every number traced to a tool result and an evaluation suite to check accuracy.",

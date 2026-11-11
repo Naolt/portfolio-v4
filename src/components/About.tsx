@@ -43,9 +43,12 @@ export default function About() {
               Engineering with a 3.63 GPA and Presidential Award.
             </p>
             <p className="text-lg leading-relaxed text-slate-400">
-              Currently building medical document processing APIs and AI
-              pipelines at Hydrus.ai. Previously cut LLM costs by 67% at Fluid
-              AI and led frontend development at Eskalate.
+              I&apos;ve built AI products for clients at Hydrus.ai and Vella AI,
+              cut LLM costs by 67% at Fluid AI, and led frontend development at
+              Eskalate. I also build and run my own products: IMS, an inventory
+              SaaS with an AI assistant live in production, and Divvy, an
+              expense-sharing app with 680+ logged expenses. Open to remote
+              contract roles in AI agents, full-stack and backend.
             </p>
           </motion.div>
 
