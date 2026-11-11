@@ -182,7 +182,7 @@ export const projects: Project[] = [
       "Playwright",
       "Vercel",
     ],
-    liveUrl: "https://ims.aurorasolve.com",
+    liveUrl: "https://getsuq.com",
     featured: true,
   },
   {
@@ -208,7 +208,7 @@ export const projects: Project[] = [
       "Playwright",
       "Vercel",
     ],
-    liveUrl: "https://divvy.aurorasolve.com",
+    liveUrl: "https://divvy.getsuq.com",
     featured: true,
   },
   {
