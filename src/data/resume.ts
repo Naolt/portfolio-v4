@@ -68,6 +68,19 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    company: "AfterQuery",
+    role: "Software Engineer, AI Training & Evaluation Data (Contract)",
+    period: "Mar 2026 – Oct 2026",
+    location: "Remote",
+    bullets: [
+      "Built coding tasks used to train and evaluate frontier AI models, each with an environment, a precise problem statement, a reference solution, and automated tests. 120 tasks accepted across four projects.",
+      "Built original C/C++ codebases with fuzzing harnesses, designed memory-safety bugs that need several state changes to trigger, and wrote crashing inputs and root-cause patches. A task was accepted only if a strong AI agent solved it at most 3 times out of 10.",
+      "Built Dockerized terminal tasks with deterministic verifiers (the reference solution passes, a no-op fails), and SWE-bench-style tasks from real bugs in private repos with fail-to-pass and pass-to-pass tests.",
+      "Revised tasks based on agent runs and reviewer feedback: raised difficulty when agents solved them too easily, and redesigned tasks rejected as duplicates.",
+    ],
+    techStack: "C, C++, Python, Docker, libFuzzer, ClusterFuzzLite, AddressSanitizer, pytest",
+  },
+  {
     company: "Vella AI",
     role: "Contract Full-Stack AI Engineer",
     period: "May 2026 – Jun 2026",
@@ -101,8 +114,8 @@ export const experiences: Experience[] = [
     period: "Feb 2025 – Aug 2025",
     location: "Dubai (Remote)",
     bullets: [
-      "Cut LLM API costs by 67% and response time from ~9s to ~3s by building a response interception system that bypasses LLM calls for known structured outputs from tools like Maps, Calendar, and Hotels.",
-      "Refactored monolithic agents into a modular architecture by moving tools into reusable MCP-based microservices integrating 10+ third-party APIs, with LangGraph handling state.",
+      "Migrated a 3,500-line monolithic agent controller to LangGraph, with tools moved into reusable MCP-based microservices integrating 10+ third-party APIs, cutting agent response time from ~9s to ~3s.",
+      "Cut LLM token spend by 67% and end-to-end latency for structured results from ~30s to under 1s by building a response interception layer that turns tool outputs (Maps, Calendar, Hotels) directly into typed UI cards, skipping a second LLM call.",
       "Integrated RAG pipelines with vector search for semantic queries across events, todos, images, documents, and attachments, replacing keyword-based retrieval.",
       "Replaced a top-down agent hierarchy with a swarm architecture, enabling dynamic task handoff and direct inter-agent communication.",
       "Built a browser automation service with FastAPI and browser-use for restaurant reservations across Google Maps, OpenTable, and SevenRooms, with parallel browser instances and Chrome profile management.",
